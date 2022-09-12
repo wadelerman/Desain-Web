@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#header{
+    overflow: hidden;
+    margin: 0;
+    padding: 15px 30px;
+    text-align: left;
+    background-color: wheat;
+    font-size: 1em;
+    color: brown;
+}
+#header a{
+    float: left;
+    text-align: center;
+    padding-right: 25px;
+    font-variant-caps: all-petite-caps;
+}
+#header a:hover{
+    background-color: tomato;
+}
+.menu-bar{
+    padding-right: 50px;
+}
+.logo img{
+    float: left;
+    max-width: 25px;
+    padding-right: 3em;
+}
