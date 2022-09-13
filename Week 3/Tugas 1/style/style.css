@@ -114,11 +114,11 @@ body{
     overflow: hidden;
     position: relative;
     /* background-color: red; */
-    min-height: 500px;
+    min-height: 400px;
 }
 .tricol-left{
     width: 30%;
-    position: absolute;
+    position: relative;
     align-content: center;
 }
 .tricol-right{
@@ -129,7 +129,7 @@ body{
 }
 .tricol-center{
     width: 30%;
-    position: absolute;
+    position: relative;
     left: 36%;
 }
 
@@ -164,4 +164,40 @@ body{
     font-weight: normal;
     text-transform: none;
     text-align: justify;
+}
+
+.big-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: aqua;
+}
+
+.headernormal{
+    overflow: visible;
+    font-size: 3em;
+    left: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.small-post{
+    position: relative;
+}
+.small-image img{
+    height: 50px;
+    width: 50px;
+    float: left;
+    padding-right: 15px;
+}
+.small-title{
+    font-size: 0.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.small-caption{
+    margin-top: -10px;
+    text-transform: none;
+    font-weight: 200;
+    font-size: 0.3e,;
 }
