@@ -111,7 +111,57 @@ body{
 }
 .post-cont{
     width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* background-color: red; */
+    min-height: 500px;
 }
-.tricol{
-    width: 33%;
+.tricol-left{
+    width: 30%;
+    position: absolute;
+    align-content: center;
+}
+.tricol-right{
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tricol-center{
+    width: 30%;
+    position: absolute;
+    left: 36%;
+}
+
+.margint15{
+    margin-top: 15px;
+}
+.margint30{
+    margin-top: 30px;
+}
+.margint45{
+    margin-top: 45px;
+}
+
+#post-title{
+    position: absolute;
+    /* bottom: 0; */
+    /* height: 30%; */
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#post-title p:hover{
+    color: aliceblue;
+}
+.post-image img{
+    /* width: 100px; */
+    height: 200px;
+    max-width: 100%;
+}
+#post-caption{
+    font-size: 0.8em;
+    font-weight: normal;
+    text-transform: none;
+    text-align: justify;
 }
