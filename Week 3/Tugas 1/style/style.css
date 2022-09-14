@@ -171,7 +171,7 @@ body{
     height: 100%;
     overflow: hidden;
     position: relative;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .headernormal{
@@ -182,6 +182,7 @@ body{
     left: 0;
     font-weight: 800;
     text-transform: uppercase;
+    margin: -20px 0px;
 }
 .small-post{
     position: relative;
@@ -208,4 +209,28 @@ body{
     position: absolute;
     right: 0;
     top: 0;
+}
+.tricol-center-mod{
+    width: 30%;
+    position: absolute;
+    left: 36%;
+    top: 0%;
+}
+.gray{
+    /* width: 100%; */
+    height: 100%;
+    background-color: gray;
+}
+.tricol-right-mod p{
+    font-size: 2em;
+    margin: 20px;
+    font-weight: 700;
+}
+.graybox50{
+    
+    right: 30px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: gray;
 }
