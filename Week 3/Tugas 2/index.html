@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  opacity: 0%;
+}
+
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  /* outline: 0; */
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+.fn{
+
+}
+
+.ln{
+
+}
+
+.email{
+
+}
+
+</style>
+
+<div class="form">
+    <div class="title">Halo!</div>
+    <div class="subtitle">Silahkan isi form ini</div>
+    <div class="input-container ic1">
+        <input id="firstname" class="input fn" type="text" placeholder=" "/>
+        <label for="firstname" class="placeholder">Nama depan</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="lastname" class="input ln" type="text" placeholder=" " />
+        <label for="lastname" class="placeholder">Nama belakang</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="email" class="input email" type="text" placeholder=" " />
+        <label for="email" class="placeholder">Email</label>>
+    </div>
+    <button onClick="validation()" type="text" class="submit">Daftar</button>
+</div>
+
+<script>
+function validation() {
+    var fn = document.getElementById("firstname").value;
+    var ln = document.getElementById("lastname").value; 
+    var em = document.getElementById("email").value;
+    var container = Array.from(document.getElementsByClassName('input fn'));
+    var container2 = Array.from(document.getElementsByClassName('input ln'));
+    var container3 = Array.from(document.getElementsByClassName('input email'));
+    if (fn == ""){
+        container.forEach(container => {
+            container.style.backgroundColor = 'red';
+        });
+        alert("Masukkan nama depan anda!")
+    }
+    else if (ln == ""){
+        alert("Masukkan nama belakang anda!")
+        container2.forEach(container2 => {
+            container2.style.backgroundColor = 'red';
+        });
+    }
+    else if (em == ""){
+        alert("Masukkan alamat email anda!")
+        container3.forEach(container3 => {
+            container3.style.backgroundColor = 'red';
+        });
+    }
+    else{
+        alert("Data anda sedang diproses")
+        return true;
+    }
+}
+</script>
+
+</body>
+</html>
