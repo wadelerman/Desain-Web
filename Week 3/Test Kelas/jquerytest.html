@@ -1,0 +1,83 @@
+<html>
+    
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+        // $("button").click(function(){ //ini buat hide 
+        //     $("p").hide();
+        //     $(".newClass").hide();
+        // });
+        $("button").click(function(){
+            $("p").toggle("slow", function(){ //toggle, jadi bisa di hide bisa di show
+            });
+            // $("foo").toggle(display);
+            var str = $("#input").val();
+            $("#show").html(str);
+        });
+    });
+    
+    $(document).ready(function(){
+        var brands = [
+                "Samsung",
+                "Apple",
+                "OPPO",
+                "Realme",
+                "Infinix",
+                "Lenovo",
+                "ZTE",
+                "Asus",
+                "Blackshark",
+                "Acer",
+                "Alcatel",
+                "Blackberry",
+                "Google",
+                "Huawei",
+                "Xiaomi",
+                "LG",
+                "Meizu",
+                "Nokia",
+                "I-cherry",
+                "Sharp",
+                "Vivo"
+            ];
+
+            $('#input').autocomplete({
+                source: brands
+            });
+        });
+
+function startAjax() {
+  $("#click1").text("Calling server");
+  $.ajax({url:"json.json",
+      	success:callbackFunction,error:errorFunction,
+      dataType: 'json'} /* request json -> JS 			    object */
+  );
+}
+function callbackFunction(data,info) {
+  $("#clickme").text("result:"+data); /*data is JS 				        object */
+}
+function errorFunction(data,info) {
+  $("#clickme").text("error occurred:"+info);
+}
+
+  </script>
+  <style>
+    p{
+        font-size: 2em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <p style="display: none" id="show">Bye</p>
+    <p class="newClass">Sample Class Selector</p>
+    <p id="newID">Coba ketik nama brand</p>
+    <input id="input">
+    <button>Check</button>
+    <button id="click1" onclick="startAjax()"></button>
+</body>
+</html>
